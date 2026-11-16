@@ -2,7 +2,7 @@
 
 jurre
 
-test Computer simulaties zijn een belangrijk onderdeel bij natuurkundig onderzoek: wat we niet in het lab kunnen doen, of waar we niet goed aan kunnen meten, kunnen we alsnog bestuderen dankzij simulaties. In deze module leggen we de basis voor natuurkundige computer simulaties en maken we de eerste stappen in ons deeltjes model.
+Computera simulaties zijn een belangrijk onderdeel bij natuurkundig onderzoek: wat we niet in het lab kunnen doen, of waar we niet goed aan kunnen meten, kunnen we alsnog bestuderen dankzij simulaties. In deze module leggen we de basis voor natuurkundige computer simulaties en maken we de eerste stappen in ons deeltjes model.
 
 De basis van een goede computer simulatie ligt, net als bij het oplossen van een natuurkundig probleem in een gedegen systematische aanpak. Deze begint vaak met:
 1. Het maken van een tekening van de situatie
@@ -37,7 +37,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Beginwaarden
-dt = 0.25                  #s
+dt = 0.25 #s
 t_e = 10                   #s
 N = int(t_e/dt)+1
 t = np.arange(0,t_e+dt,dt) #s
@@ -67,6 +67,7 @@ plt.ylabel('$x$(m)')
 plt.plot(t,x_1,'r.', markersize=1, label='fietser 1')
 plt.plot(t,x_2,'b.', markersize=1, label='fietser 2')
 
+plt.grid()
 plt.show()
 
 
@@ -79,9 +80,10 @@ Maak het tijdsinterval $dt$ groter en vergelijk de afgelegde weg in de tien seco
 ```
 
 
-<!-- Jouw antwoord hier  -->
+De versnelling (1/2 * dt^2 * a) wordt niet meegenomen in de berekening. Daardoor wordt de fout kwadratisch groter: bij een 2x zo grote dt is de fout 4x zo groot.
 
 ```python
+
 %reset -f  #clears memory as we don't need it further down 
 ```
 
